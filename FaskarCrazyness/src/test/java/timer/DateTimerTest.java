@@ -1,9 +1,10 @@
-package test;
+package timer;
 
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.TreeSet;
 import java.util.Vector;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import timer.DateTimer;
 
@@ -17,7 +18,7 @@ class DateTimerTest {
 	DateTimer date3;
 	Vector<Integer> lapsTimes3;
 	
-	@Test
+	@BeforeEach
 	void setUp() {
 		tree = new TreeSet<Integer>();
 		tree.add(1);
