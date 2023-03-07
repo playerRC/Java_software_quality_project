@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.util.TreeSet;
 import java.util.Vector;
 
-import jshell.spi.ExecutionControl.NotImplementedException;
+//import jshell.spi.ExecutionControl.NotImplementedException;
 import action.DiscreteAction;
 import action.DiscreteActionInterface;
 import action.DiscreteActionOnOffDependent;
@@ -53,67 +53,67 @@ class DiscreteActionOnOffDependentTest {
     }
 
     /*
-        Entrée : DiscreteActionOnOffDependent(Obj,on,timerOn,off,timerOff)
-        Description : Test de déclaration de l’objet DiscreteActionOnOffDependent
-        Résultat Attendu :Objet créé avec un objet DiscreteAction(obj,on,timerOn) stocké dans la variable onAction, un second objet similaire DiscreteAction(obj,off,timerOff) stocké dans la variable offAction.
-        L’instanciation de offAction est également stocké dans current action et le currentLapsTime est instancié à 0.
+        Entrï¿½e : DiscreteActionOnOffDependent(Obj,on,timerOn,off,timerOff)
+        Description : Test de dï¿½claration de lï¿½objet DiscreteActionOnOffDependent
+        Rï¿½sultat Attendu :Objet crï¿½ï¿½ avec un objet DiscreteAction(obj,on,timerOn) stockï¿½ dans la variable onAction, un second objet similaire DiscreteAction(obj,off,timerOff) stockï¿½ dans la variable offAction.
+        Lï¿½instanciation de offAction est ï¿½galement stockï¿½ dans current action et le currentLapsTime est instanciï¿½ ï¿½ 0.
     */
     @Test
     void DA00D1_firstConstructor(){
-        // Aucune possibilité de récupérer daofdOneShot.onAction
-        // Aucune possibilité de récupérer daofdOneShot.offAction
+        // Aucune possibilitï¿½ de rï¿½cupï¿½rer daofdOneShot.onAction
+        // Aucune possibilitï¿½ de rï¿½cupï¿½rer daofdOneShot.offAction
         // assertEquals(daofdOneShot.onAction.getObject(), ost);
         // assertEquals(daofdOneShot.offAction.getObject(), ost);
         assertEquals(daofdOneShot.getObject(), ost);
     }
 
     /*
-        Entrée : DiscreteActionOnOffDependent(obj, on, datesOn, off, datesOff)
-        Description : Test du deuxième constructeur avec la première date de datesOn antérieur à la première date de datesOff
-        Résultat Attendu : Objet créé avec un objet DiscreteAction(obj,on, new DateTimer(datesOn)) stocké dans la variable onAction, un second objet similaire DiscreteAction(obj,on, new DateTimer(datesOn)) stocké dans la variable offAction
+        Entrï¿½e : DiscreteActionOnOffDependent(obj, on, datesOn, off, datesOff)
+        Description : Test du deuxiï¿½me constructeur avec la premiï¿½re date de datesOn antï¿½rieur ï¿½ la premiï¿½re date de datesOff
+        Rï¿½sultat Attendu : Objet crï¿½ï¿½ avec un objet DiscreteAction(obj,on, new DateTimer(datesOn)) stockï¿½ dans la variable onAction, un second objet similaire DiscreteAction(obj,on, new DateTimer(datesOn)) stockï¿½ dans la variable offAction
     */
     @Test
     void DA00D2_secondConstructorWithFirstDateOnInfFirstDateOff(){
-        // Aucune possibilité de récupérer daofdOneShot.onAction
-        // Aucune possibilité de récupérer daofdOneShot.offAction
+        // Aucune possibilitï¿½ de rï¿½cupï¿½rer daofdOneShot.onAction
+        // Aucune possibilitï¿½ de rï¿½cupï¿½rer daofdOneShot.offAction
         // assertEquals(daofdOneShot.onAction.getObject(), ost);
         // assertEquals(daofdOneShot.offAction.getObject(), ost);
         assertEquals(daofdOneShot2.getObject(), ost);
     }
 
     /*
-        Entrée : DiscreteActionOnOffDependent(obj, on, datesOn, off, datesOff)
-        Description : Test du deuxième constructeur avec la première date de datesOn postérieur à la première date de datesOff
-        Résultat Attendu : Objet créé avec un objet DiscreteAction(obj,on, new DateTimer(datesOn)) stocké dans la variable onAction, un second objet similaire DiscreteAction(obj,on, new DateTimer(datesOn)) stocké dans la variable offAction currentAction prend la valeur de offAction
+        Entrï¿½e : DiscreteActionOnOffDependent(obj, on, datesOn, off, datesOff)
+        Description : Test du deuxiï¿½me constructeur avec la premiï¿½re date de datesOn postï¿½rieur ï¿½ la premiï¿½re date de datesOff
+        Rï¿½sultat Attendu : Objet crï¿½ï¿½ avec un objet DiscreteAction(obj,on, new DateTimer(datesOn)) stockï¿½ dans la variable onAction, un second objet similaire DiscreteAction(obj,on, new DateTimer(datesOn)) stockï¿½ dans la variable offAction currentAction prend la valeur de offAction
     */
 
     @Test
     void DA00D3_secondConstructorWithFirstDateOnSupFirstDateOff(){
-        // Aucune possibilité de récupérer daofdOneShot.onAction
-        // Aucune possibilité de récupérer daofdOneShot.offAction
+        // Aucune possibilitï¿½ de rï¿½cupï¿½rer daofdOneShot.onAction
+        // Aucune possibilitï¿½ de rï¿½cupï¿½rer daofdOneShot.offAction
         // assertEquals(daofdOneShot.onAction.getObject(), ost);
         // assertEquals(daofdOneShot.offAction.getObject(), ost2);
         assertEquals(daofdOneShot3.getObject(), daofdOneShot.getObject());
     }
 
     /*
-        Entrée : DiscreteActionOnOffDependent(obj, on, datesOn, off, datesOff)
-        Description : Test du deuxième constructeur avec la première date de datesOn identique à la première date de datesOff
-        Résultat Attendu : Objet créé avec un objet DiscreteAction(obj,on, new DateTimer(datesOn)) stocké dans la variable onAction, un second objet similaire DiscreteAction(obj,on, new DateTimer(datesOn)) stocké dans la variable offAction currentAction prend la valeur de onAction
+        Entrï¿½e : DiscreteActionOnOffDependent(obj, on, datesOn, off, datesOff)
+        Description : Test du deuxiï¿½me constructeur avec la premiï¿½re date de datesOn identique ï¿½ la premiï¿½re date de datesOff
+        Rï¿½sultat Attendu : Objet crï¿½ï¿½ avec un objet DiscreteAction(obj,on, new DateTimer(datesOn)) stockï¿½ dans la variable onAction, un second objet similaire DiscreteAction(obj,on, new DateTimer(datesOn)) stockï¿½ dans la variable offAction currentAction prend la valeur de onAction
     */
     @Test
     void DA00D4_secondConstructorWithFirstDateOnEqualsFirstDateOff(){
-        // Aucune possibilité de récupérer daofdOneShot.onAction
-        // Aucune possibilité de récupérer daofdOneShot.offAction
+        // Aucune possibilitï¿½ de rï¿½cupï¿½rer daofdOneShot.onAction
+        // Aucune possibilitï¿½ de rï¿½cupï¿½rer daofdOneShot.offAction
         // assertEquals(daofdOneShot.onAction.getObject(), ost);
         // assertEquals(daofdOneShot.offAction.getObject(), ost);
         assertEquals(daofdOneShot4.getObject(), daofdOneShot4.getObject());
     }
 
     /*
-        Entrée : nextAction()
-        Description : Test de la méthode avec un currentAction différent de onAction
-        Résultat Attendu : Remplacement de la currentAction par l’action suivante de l’action on
+        Entrï¿½e : nextAction()
+        Description : Test de la mï¿½thode avec un currentAction diffï¿½rent de onAction
+        Rï¿½sultat Attendu : Remplacement de la currentAction par lï¿½action suivante de lï¿½action on
     */
     @Test
     void DA00D5_nextActionWithCurrentActionDiffOnAction(){
@@ -126,9 +126,9 @@ class DiscreteActionOnOffDependentTest {
     }
 
     /*
-        Entrée : nextAction()
-        Description : Test de la méthode avec un currentAction égale à onAction
-        Résultat Attendu : Remplacement de la currentAction par l’action suivante de l’off Action, et on attribu lastOffDelay par le LapsTime de la nouvelle currentAction
+        Entrï¿½e : nextAction()
+        Description : Test de la mï¿½thode avec un currentAction ï¿½gale ï¿½ onAction
+        Rï¿½sultat Attendu : Remplacement de la currentAction par lï¿½action suivante de lï¿½off Action, et on attribu lastOffDelay par le LapsTime de la nouvelle currentAction
     */
     @Test
     void DA00D6_nextActionWithCurrentActionEqualsOnAction(){
@@ -137,25 +137,21 @@ class DiscreteActionOnOffDependentTest {
         daofdOneShot.nextAction();
         assertEquals(daofdOneShot.getCurrentLapsTime(),10);
         assertEquals(daofdOneShot.getObject(),ost);
-        // Aucune possibilité de récupérer daofdOneShot.lastOffDelay
+        // Aucune possibilitï¿½ de rï¿½cupï¿½rer daofdOneShot.lastOffDelay
         // assertEquals(daofdOneShot2.getLastOffDelay(),24);
     }
 
     /*
-        Entrée :spendTime(4)
-        Description : Test de la méthode spendTime : l’action courante se voit tester sur l’action spendTime()
-        Résultat Attendu : Retourne void
+        Entrï¿½e :spendTime(4)
+        Description : Test de la mï¿½thode spendTime : lï¿½action courante se voit tester sur lï¿½action spendTime()
+        Rï¿½sultat Attendu : Retourne void
     */
-    @Test
-    void DA00D7_spendTime() throws NotImplementedException {
-        // TODO
-        // assertEquals(daofdOneShot.spendTime(4), void);
-    }
+    
 
     /*
-        Entrée : getMethod()
-        Description : Test du Getter pour la récupération de la méthode de l’objet courant
-        Résultat Attendu : Récupération de la méthode de l’objet courant
+        Entrï¿½e : getMethod()
+        Description : Test du Getter pour la rï¿½cupï¿½ration de la mï¿½thode de lï¿½objet courant
+        Rï¿½sultat Attendu : Rï¿½cupï¿½ration de la mï¿½thode de lï¿½objet courant
     */
     @Test
     void DAO0D8_getMethod() throws NoSuchMethodException {
@@ -163,9 +159,9 @@ class DiscreteActionOnOffDependentTest {
     }
 
     /*
-        Entrée : getCurrentLapsTime()
-        Description : Test du Getter pour la récupération du laps time de l’objet courant
-        Résultat Attendu : Récupération du laps time de l’objet courant
+        Entrï¿½e : getCurrentLapsTime()
+        Description : Test du Getter pour la rï¿½cupï¿½ration du laps time de lï¿½objet courant
+        Rï¿½sultat Attendu : Rï¿½cupï¿½ration du laps time de lï¿½objet courant
     */
     @Test
     void DA00D9_getCurrentLapsTime(){
@@ -176,9 +172,9 @@ class DiscreteActionOnOffDependentTest {
     }
 
     /*
-        Entrée : getObject()
-        Description : Test du Getter pour récupérer l’objet depuis l’action courtante
-        Résultat Attendu : Retour l’objet de l’action courante
+        Entrï¿½e : getObject()
+        Description : Test du Getter pour rï¿½cupï¿½rer lï¿½objet depuis lï¿½action courtante
+        Rï¿½sultat Attendu : Retour lï¿½objet de lï¿½action courante
     */
     @Test
     void DA00D10_getObject(){
@@ -186,9 +182,9 @@ class DiscreteActionOnOffDependentTest {
     }
 
     /*
-        Entrée : compareTo(c)
+        Entrï¿½e : compareTo(c)
         Description : Test de compareTo
-        Résultat Attendu : Retourne la valeur du compareTo de currentAction avec c
+        Rï¿½sultat Attendu : Retourne la valeur du compareTo de currentAction avec c
     */
     @Test
     void DA00D11_compareTo(){
@@ -198,9 +194,9 @@ class DiscreteActionOnOffDependentTest {
     }
 
     /*
-        Entrée : next()
-        Description : Test de next lorsqu’il n’y a pas d’action future
-        Résultat Attendu : Retourne l'action courante
+        Entrï¿½e : next()
+        Description : Test de next lorsquï¿½il nï¿½y a pas dï¿½action future
+        Rï¿½sultat Attendu : Retourne l'action courante
     */
     @Test
     void DA00D12_nextWithNoFuturAction(){
@@ -211,9 +207,9 @@ class DiscreteActionOnOffDependentTest {
     }
 
     /*
-        Entrée : next()
-        Description : Test de next lorsqu’il y a une action future
-        Résultat Attendu : Retourne l'action courante
+        Entrï¿½e : next()
+        Description : Test de next lorsquï¿½il y a une action future
+        Rï¿½sultat Attendu : Retourne l'action courante
     */
     @Test
     void DA00D13_nextWithFuturAction(){
@@ -221,9 +217,9 @@ class DiscreteActionOnOffDependentTest {
     }
 
     /*
-        Entrée : hasNext()
+        Entrï¿½e : hasNext()
         Description : Test de hasNext avec onAction et offAction ont une action suivante
-        Résultat Attendu : Retourne True
+        Rï¿½sultat Attendu : Retourne True
     */
     @Test
     void DA00D14_hasNextWithOnActionHaveNextAndOffActionHaveNext(){
@@ -231,9 +227,9 @@ class DiscreteActionOnOffDependentTest {
     }
 
     /*
-         Entrée : hasNext()
-         Description : Test de hasNext avec onAction n’a pas d’action suivante et offAction a une action suivante
-         Résultat Attendu :Retourne True
+         Entrï¿½e : hasNext()
+         Description : Test de hasNext avec onAction nï¿½a pas dï¿½action suivante et offAction a une action suivante
+         Rï¿½sultat Attendu :Retourne True
      */
     @Test
     void DA00D15_hasNextWithOnActionHaveNotNextAndOffActionHaveNext(){
@@ -242,9 +238,9 @@ class DiscreteActionOnOffDependentTest {
     }
 
     /*
-         Entrée : hasNext()
-         Description : Test de hasNext avec onAction a une action suivante et offAction n’a pas d’action suivante
-         Résultat Attendu : Retourne True
+         Entrï¿½e : hasNext()
+         Description : Test de hasNext avec onAction a une action suivante et offAction nï¿½a pas dï¿½action suivante
+         Rï¿½sultat Attendu : Retourne True
      */
     @Test
     void DA00D16_hasNextWithOnActionHaveNextAndOffActionHaveNotNext(){
@@ -253,9 +249,9 @@ class DiscreteActionOnOffDependentTest {
     }
 
     /*
-         Entrée : hasNext()
-         Description : Test de hasNext avec onAction et offAction n’ont pas d’action suivante
-         Résultat Attendu : Retourne False
+         Entrï¿½e : hasNext()
+         Description : Test de hasNext avec onAction et offAction nï¿½ont pas dï¿½action suivante
+         Rï¿½sultat Attendu : Retourne False
      */
     @Test
     void DA00D17_hasNextWithOnActionHaveNotNextAndOffActionHaveNotNext(){
@@ -265,9 +261,9 @@ class DiscreteActionOnOffDependentTest {
     }
 
     /*
-         Entrée : spendTime()
+         Entrï¿½e : spendTime()
          Description : Test de spendTime avec t < lapstime
-         Résultat Attendu : Lapstime est diminué de t
+         Rï¿½sultat Attendu : Lapstime est diminuï¿½ de t
      */
     @Test
     void DAOOD18_spendTime() {

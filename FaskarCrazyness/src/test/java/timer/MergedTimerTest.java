@@ -1,9 +1,10 @@
-package test;
+package timer;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.TreeSet;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import timer.DateTimer;
 import timer.PeriodicTimer;
@@ -31,7 +32,7 @@ class MergedTimerTest {
 	MergedTimer mergedTimer4;
 	MergedTimer mergedTimer5;
 	MergedTimer mergedTimer6;
-	@Test
+	@BeforeEach
 	void setUp() {
 		/*dateTimer objects*/
 		tree1 = new TreeSet<Integer>();
@@ -68,13 +69,11 @@ class MergedTimerTest {
 	
 	@Test 
 	void hasNextTest() {
-		setUp();
 		assertTrue(mergedTimer4.hasNext());
 		assertTrue(mergedTimer6.hasNext());
 	}
 	@Test
 	void nextTest() {
-		setUp();
 		assertEquals(mergedTimer4.next(), 15);
 		assertEquals(mergedTimer6.next(), 15);
 	}
