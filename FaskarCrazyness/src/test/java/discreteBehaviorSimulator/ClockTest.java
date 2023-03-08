@@ -19,16 +19,13 @@ class ClockTest {
 	
 	@BeforeEach
 	void setUp1() throws Exception {
-		c1 = new Clock();
-		c2 = new Clock();
+		c1 = Clock.getInstance();
+		c2 = Clock.getInstance();
 	}
 
 	@Test
 	void testGetInstance() {
-		Object ClockInst1 = c1.getInstance();
-		Object ClockInst2 = c1.getInstance();
-		assertSame(ClockInst1,ClockInst2);
-		
+		assertSame(c1,c2);
 	}
 	
 	
