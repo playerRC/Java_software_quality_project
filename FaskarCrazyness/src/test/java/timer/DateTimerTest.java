@@ -51,7 +51,12 @@ class DateTimerTest {
 	@Test
 	void nextTest() {
 		assertEquals(date2.next(), 1);
-		//assertEquals(date3.next(), null);
+		try {
+			assertEquals(date3.next(), null);
+		}
+		catch (Exception e) {
+			fail("nextTest failure");
+		}
 	}
 
 }
