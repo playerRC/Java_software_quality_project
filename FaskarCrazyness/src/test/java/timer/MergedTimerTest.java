@@ -77,5 +77,7 @@ class MergedTimerTest {
 		assertEquals(mergedTimer4.next(), 15);
 		assertEquals(mergedTimer6.next(), 15);
 	}
+	
+	/*rachid l'enfoiré*/
 
 }
