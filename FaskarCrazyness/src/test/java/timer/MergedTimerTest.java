@@ -32,6 +32,7 @@ class MergedTimerTest {
 	MergedTimer mergedTimer4;
 	MergedTimer mergedTimer5;
 	MergedTimer mergedTimer6;
+	
 	@BeforeEach
 	void setUp() {
 		/*dateTimer objects*/
@@ -65,6 +66,7 @@ class MergedTimerTest {
 		mergedTimer5 = new MergedTimer(dateTimer1, periodicTimer1);
 		mergedTimer6 = new MergedTimer(oneShotTimer1, mergedTimer5);
 		
+		
 	}
 	
 	@Test 
@@ -78,6 +80,4 @@ class MergedTimerTest {
 		assertEquals(mergedTimer6.next(), 15);
 	}
 	
-	/*rachid l'enfoiré*/
-
 }
