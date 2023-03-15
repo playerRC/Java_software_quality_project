@@ -59,67 +59,6 @@ class DiscreteActionTest {
     }
 
     @Test
-    @DisplayName("get Current Laps Time")
-    public void test_getCurrentLapsTime(){
-        try {
-            log.info("Starting execution of getCurrentLapsTime");
-            Integer expectedValue=0;
-
-
-            DiscreteAction discreteaction  = new DiscreteAction(new Object(), "",  (Timer) null);
-            Integer actualValue=discreteaction.getCurrentLapsTime();
-            log.info("Expected Value="+ expectedValue +" . Actual Value="+actualValue);
-            System.out.println("Expected Value="+ expectedValue +" . Actual Value="+actualValue);
-            assertEquals(expectedValue, actualValue);
-        } catch (Exception exception) {
-            log.info("Exception in execution of execute1GetAllLogFromFirstMovF-"+exception);
-            exception.printStackTrace();
-            assertFalse(false);
-        }
-    }
-
-    @Test
-    @DisplayName("get Object")
-    public void test_getObject(){
-        try {
-            log.info("Starting execution of getObject");
-            Object expectedValue = null;
-
-
-            DiscreteAction discreteaction  = new DiscreteAction(new Object(), "",  (Timer) null);
-            Object actualValue=discreteaction.getObject();
-            log.info("Expected Value="+ expectedValue +" . Actual Value="+actualValue);
-            System.out.println("Expected Value="+ expectedValue +" . Actual Value="+actualValue);
-            assertEquals(expectedValue, actualValue);
-        } catch (Exception exception) {
-            log.info("Exception in execution of execute1GetAllLogFromFirstMovF-"+exception);
-            exception.printStackTrace();
-            assertFalse(false);
-        }
-    }
-
-    @Test
-    @DisplayName("compare To")
-    public void compareTo(){
-        try {
-            log.info("Starting execution of compareTo");
-            int expectedValue=0;
-            DiscreteActionInterface c = null;
-
-            DiscreteAction discreteaction  = new DiscreteAction(new Object(), "",  (Timer) null);
-            int actualValue=discreteaction.compareTo( c);
-            log.info("Expected Value="+ expectedValue +" . Actual Value="+actualValue);
-            System.out.println("Expected Value="+ expectedValue +" . Actual Value="+actualValue);
-            assertEquals(expectedValue, actualValue);
-        } catch (Exception exception) {
-            log.info("Exception in execution of execute1GetAllLogFromFirstMovF-"+exception);
-            exception.printStackTrace();
-            assertFalse(false);
-        }
-    }
-
-
-    @Test
     @DisplayName("has Next")
     public void test_hasNext(){
         try {

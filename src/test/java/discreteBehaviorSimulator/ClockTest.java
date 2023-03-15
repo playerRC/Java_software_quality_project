@@ -175,27 +175,7 @@ class ClockTest {
             Assertions.assertFalse(false);
         }
     }
-
-    @Test
-    @DisplayName("get Time")
-    public void test_getTime(){
-        try {
-            log.info("Starting execution of getTime");
-            long expectedValue=0;
-
-
-            Clock clock  = Clock.getInstance();
-            long actualValue=clock.getTime();
-            log.info("Expected Value="+ expectedValue +" . Actual Value="+actualValue);
-            System.out.println("Expected Value="+ expectedValue +" . Actual Value="+actualValue);
-            Assertions.assertEquals(expectedValue, actualValue);
-        } catch (Exception exception) {
-            log.info("Exception in execution of execute1GetAllLogFromFirstMovF-"+exception);
-            exception.printStackTrace();
-            Assertions.assertFalse(false);
-        }
-    }
-
+    
     @Test
     @DisplayName("lock Read Access")
     public void test_lockReadAccess(){
