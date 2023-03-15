@@ -66,6 +66,7 @@ class MergedTimerTest {
 		mergedTimer5 = new MergedTimer(dateTimer1, periodicTimer1);
 		mergedTimer6 = new MergedTimer(oneShotTimer1, mergedTimer5);
 		
+		
 	}
 	
 	@Test 
