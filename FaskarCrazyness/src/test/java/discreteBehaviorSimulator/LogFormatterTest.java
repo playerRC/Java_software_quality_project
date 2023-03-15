@@ -1,17 +1,18 @@
-package test.timer;
+package discreteBehaviorSimulator;
 
+import discreteBehaviorSimulator.LogFormatter;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import timer.PeriodicTimer;
-import timer.RandomTimer;
 
+import java.util.logging.Handler;
+import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class PeriodicTimerTest {
+class LogFormatterTest {
 
     private Logger log = Logger.getLogger(String.valueOf(this.getClass()));
 
@@ -20,18 +21,16 @@ class PeriodicTimerTest {
     }
 
     @Test
-    @DisplayName("get Period")
-    public void test_getPeriod(){
+    @DisplayName("format")
+    public void test_format(){
         try {
-            log.info("Starting execution of getPeriod");
-            int expectedValue=0;
+            log.info("Starting execution of format");
+            String expectedValue="";
+            LogRecord rec = null;
 
-            int periodc=0;
-            int atc=0;
-            RandomTimer moreOrLessc = null;
 
-            PeriodicTimer periodictimer  =new PeriodicTimer( periodc ,atc ,moreOrLessc);
-            int actualValue=periodictimer.getPeriod();
+            LogFormatter logformatter  =new LogFormatter();
+            String actualValue=logformatter.format( rec);
             log.info("Expected Value="+ expectedValue +" . Actual Value="+actualValue);
             System.out.println("Expected Value="+ expectedValue +" . Actual Value="+actualValue);
             assertEquals(expectedValue, actualValue);
@@ -43,19 +42,16 @@ class PeriodicTimerTest {
     }
 
     @Test
-    @DisplayName("next")
-    public void test_next(){
+    @DisplayName("get Head")
+    public void test_getHead(){
         try {
-            log.info("Starting execution of next");
-            Integer expectedValue=0;
-            int since=0;
+            log.info("Starting execution of getHead");
+            String expectedValue="";
+            Handler h = null;
 
-            int periodc=0;
-            int atc=0;
-            RandomTimer moreOrLessc = null;
 
-            PeriodicTimer periodictimer  =new PeriodicTimer( periodc ,atc ,moreOrLessc);
-            Integer actualValue=periodictimer.next();
+            LogFormatter logformatter  =new LogFormatter();
+            String actualValue=logformatter.getHead( h);
             log.info("Expected Value="+ expectedValue +" . Actual Value="+actualValue);
             System.out.println("Expected Value="+ expectedValue +" . Actual Value="+actualValue);
             assertEquals(expectedValue, actualValue);
@@ -67,18 +63,16 @@ class PeriodicTimerTest {
     }
 
     @Test
-    @DisplayName("has Next")
-    public void test_hasNext(){
+    @DisplayName("get Tail")
+    public void test_getTail(){
         try {
-            log.info("Starting execution of hasNext");
-            boolean expectedValue=false;
+            log.info("Starting execution of getTail");
+            String expectedValue="";
+            Handler h = null;
 
-            int periodc=0;
-            int atc=0;
-            RandomTimer moreOrLessc = null;
 
-            PeriodicTimer periodictimer  =new PeriodicTimer( periodc ,atc ,moreOrLessc);
-            boolean actualValue=periodictimer.hasNext();
+            LogFormatter logformatter  =new LogFormatter();
+            String actualValue=logformatter.getTail( h);
             log.info("Expected Value="+ expectedValue +" . Actual Value="+actualValue);
             System.out.println("Expected Value="+ expectedValue +" . Actual Value="+actualValue);
             assertEquals(expectedValue, actualValue);

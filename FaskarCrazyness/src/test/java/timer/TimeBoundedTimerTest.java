@@ -1,16 +1,14 @@
-package test.timer;
+package timer;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-import timer.OneShotTimer;
+import org.junit.jupiter.api.*;
+import timer.TimeBoundedTimer;
+import timer.Timer;
 
 import java.util.logging.Logger;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class OneShotTimerTest {
+class TimeBoundedTimerTest {
 
     private Logger log = Logger.getLogger(String.valueOf(this.getClass()));
 
@@ -23,19 +21,20 @@ class OneShotTimerTest {
     public void test_hasNext(){
         try {
             log.info("Starting execution of hasNext");
-            boolean expectedValue = false;
+            boolean expectedValue=false;
 
-            int atc = 0;
+            Timer timer2boundc = null;
+            int startTimec=0;
 
-            OneShotTimer oneshottimer  = new OneShotTimer( atc);
-            boolean actualValue=oneshottimer.hasNext();
+            TimeBoundedTimer timeboundedtimer  =new TimeBoundedTimer( timer2boundc ,startTimec);
+            boolean actualValue=timeboundedtimer.hasNext();
             log.info("Expected Value="+ expectedValue +" . Actual Value="+actualValue);
             System.out.println("Expected Value="+ expectedValue +" . Actual Value="+actualValue);
-            assertEquals(expectedValue, actualValue);
+            Assertions.assertEquals(expectedValue, actualValue);
         } catch (Exception exception) {
             log.info("Exception in execution of execute1GetAllLogFromFirstMovF-"+exception);
             exception.printStackTrace();
-            assertFalse(false);
+            Assertions.assertFalse(false);
         }
     }
 
@@ -46,17 +45,18 @@ class OneShotTimerTest {
             log.info("Starting execution of next");
             Integer expectedValue=0;
 
-            int atc=0;
+            Timer timer2boundc = null;
+            int startTimec=0;
 
-            OneShotTimer oneshottimer  =new OneShotTimer( atc);
-            Integer actualValue=oneshottimer.next();
+            TimeBoundedTimer timeboundedtimer  =new TimeBoundedTimer( timer2boundc ,startTimec);
+            Integer actualValue=timeboundedtimer.next();
             log.info("Expected Value="+ expectedValue +" . Actual Value="+actualValue);
             System.out.println("Expected Value="+ expectedValue +" . Actual Value="+actualValue);
-            assertEquals(expectedValue, actualValue);
+            Assertions.assertEquals(expectedValue, actualValue);
         } catch (Exception exception) {
             log.info("Exception in execution of execute1GetAllLogFromFirstMovF-"+exception);
             exception.printStackTrace();
-            assertFalse(false);
+            Assertions.assertFalse(false);
         }
     }
 

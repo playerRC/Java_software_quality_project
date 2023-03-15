@@ -1,4 +1,4 @@
-package test.discreteBehaviorSimulator;
+package discreteBehaviorSimulator;
 
 import action.DiscreteActionInterface;
 import org.junit.jupiter.api.AfterEach;

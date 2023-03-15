@@ -1,4 +1,4 @@
-package test.timer;
+package timer;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
