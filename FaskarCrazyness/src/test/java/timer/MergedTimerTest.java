@@ -32,6 +32,7 @@ class MergedTimerTest {
 	MergedTimer mergedTimer4;
 	MergedTimer mergedTimer5;
 	MergedTimer mergedTimer6;
+	
 	@BeforeEach
 	void setUp() {
 		/*dateTimer objects*/
@@ -78,6 +79,4 @@ class MergedTimerTest {
 		assertEquals(mergedTimer6.next(), 15);
 	}
 	
-	/*rachid l'enfoiré*/
-
 }
