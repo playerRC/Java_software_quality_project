@@ -12,9 +12,6 @@ class PeriodicTimerTest {
 	PeriodicTimer timer1;
 	PeriodicTimer timer2;
 	
-	
-
-	
 	@BeforeEach
 	void setUp() {
 		timer1 = new PeriodicTimer(10);
