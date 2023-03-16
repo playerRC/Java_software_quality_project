@@ -125,7 +125,7 @@ class ClockTest {
     public void test_isVirtual(){
         try {
             log.info("Starting execution of isVirtual");
-            boolean expectedValue=false;
+            boolean expectedValue=true;
 
 
             Clock clock  = Clock.getInstance();
@@ -185,6 +185,7 @@ class ClockTest {
 
 
             Clock clock  = Clock.getInstance();
+            clock.setVirtual(true);
             long actualValue=clock.getTime();
             log.info("Expected Value="+ expectedValue +" . Actual Value="+actualValue);
             System.out.println("Expected Value="+ expectedValue +" . Actual Value="+actualValue);

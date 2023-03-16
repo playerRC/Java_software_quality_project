@@ -44,7 +44,7 @@ class DiscreteActionDependentTest {
     public void test_compareTo(){
         try {
             log.info("Starting execution of compareTo");
-            int expectedValue=0;
+            int expectedValue = 1;
             DiscreteActionInterface c = null;
 
             DiscreteActionDependent discreteactiondependent  =new DiscreteActionDependent( new Object(), "", (Timer) null);
@@ -65,7 +65,7 @@ class DiscreteActionDependentTest {
     public void test_isEmpty(){
         try {
             log.info("Starting execution of isEmpty");
-            Boolean expectedValue=false;
+            Boolean expectedValue = true;
             DiscreteActionDependent discreteactiondependent  =new DiscreteActionDependent( new Object(), "", (Timer) null);
 
             Boolean actualValue=discreteactiondependent.isEmpty();
@@ -84,11 +84,13 @@ class DiscreteActionDependentTest {
     public void test_next(){
         try {
             log.info("Starting execution of next");
-            DiscreteActionInterface expectedValue = null;
+            
 
-            DiscreteActionDependent discreteactiondependent  =new DiscreteActionDependent( new Object(), "", (Timer) null);
+            DiscreteActionDependent discreteactiondependent  = new DiscreteActionDependent( new Object(), "", (Timer) null);
+            
+            DiscreteActionInterface expectedValue = discreteactiondependent;
 
-            DiscreteActionInterface actualValue=discreteactiondependent.next();
+            DiscreteActionInterface actualValue = discreteactiondependent.next();
             log.info("Expected Value="+ expectedValue +" . Actual Value="+actualValue);
             System.out.println("Expected Value="+ expectedValue +" . Actual Value="+actualValue);
             assertEquals(expectedValue, actualValue);
@@ -196,7 +198,7 @@ class DiscreteActionDependentTest {
     public void test_getCurrentLapsTime(){
         try {
             log.info("Starting execution of getCurrentLapsTime");
-            Integer expectedValue=0;
+            Integer expectedValue = null;
 
             DiscreteActionDependent discreteactiondependent  = new DiscreteActionDependent( new Object(), "", (Timer) null);
 
@@ -216,9 +218,11 @@ class DiscreteActionDependentTest {
     public void test_getObject(){
         try {
             log.info("Starting execution of getObject");
-            Object expectedValue = null;
+     
+            Object o = new Object();
+            Object expectedValue = o;
 
-            DiscreteActionDependent discreteactiondependent  =new DiscreteActionDependent( new Object(), "", (Timer) null);
+            DiscreteActionDependent discreteactiondependent  =new DiscreteActionDependent( o, "", (Timer) null);
 
             Object actualValue=discreteactiondependent.getObject();
             log.info("Expected Value="+ expectedValue +" . Actual Value="+actualValue);

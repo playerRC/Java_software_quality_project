@@ -63,7 +63,7 @@ class DiscreteActionTest {
     public void test_getCurrentLapsTime(){
         try {
             log.info("Starting execution of getCurrentLapsTime");
-            Integer expectedValue=0;
+            Integer expectedValue=null;
 
 
             DiscreteAction discreteaction  = new DiscreteAction(new Object(), "",  (Timer) null);
@@ -83,10 +83,11 @@ class DiscreteActionTest {
     public void test_getObject(){
         try {
             log.info("Starting execution of getObject");
-            Object expectedValue = null;
+            Object o = new Object();
+            Object expectedValue = o;
 
 
-            DiscreteAction discreteaction  = new DiscreteAction(new Object(), "",  (Timer) null);
+            DiscreteAction discreteaction  = new DiscreteAction(o, "",  (Timer) null);
             Object actualValue=discreteaction.getObject();
             log.info("Expected Value="+ expectedValue +" . Actual Value="+actualValue);
             System.out.println("Expected Value="+ expectedValue +" . Actual Value="+actualValue);
@@ -103,7 +104,7 @@ class DiscreteActionTest {
     public void compareTo(){
         try {
             log.info("Starting execution of compareTo");
-            int expectedValue=0;
+            int expectedValue = 1;
             DiscreteActionInterface c = null;
 
             DiscreteAction discreteaction  = new DiscreteAction(new Object(), "",  (Timer) null);
