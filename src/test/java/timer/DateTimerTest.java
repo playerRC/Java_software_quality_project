@@ -47,4 +47,17 @@ class DateTimerTest {
 		assertTrue(date.hasNext());
 		assertFalse(date3.hasNext());
 	}
+	
+	/*@Test
+	void nextTest() {
+		//assertEquals(date2.next(), 1);
+		try {
+			assertEquals(0, date3.next());
+		}
+		catch (Exception e) {
+			//fail("nextTest failure");
+			assertTrue(false);
+		}
+	}*/
+
 }

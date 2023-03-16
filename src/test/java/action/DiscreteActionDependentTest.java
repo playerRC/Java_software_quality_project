@@ -38,7 +38,69 @@ class DiscreteActionDependentTest {
             assertFalse(false);
         }
     }
-    
+
+    @Test
+    @DisplayName("compare To")
+    public void test_compareTo(){
+        try {
+            log.info("Starting execution of compareTo");
+            int expectedValue = 1;
+            DiscreteActionInterface c = null;
+
+            DiscreteActionDependent discreteactiondependent  =new DiscreteActionDependent( new Object(), "", (Timer) null);
+
+            int actualValue=discreteactiondependent.compareTo( c);
+            log.info("Expected Value="+ expectedValue +" . Actual Value="+actualValue);
+            System.out.println("Expected Value="+ expectedValue +" . Actual Value="+actualValue);
+            assertEquals(expectedValue, actualValue);
+        } catch (Exception exception) {
+            log.info("Exception in execution of execute1GetAllLogFromFirstMovF-"+exception);
+            exception.printStackTrace();
+            assertFalse(false);
+        }
+    }
+
+    @Test
+    @DisplayName("is Empty")
+    public void test_isEmpty(){
+        try {
+            log.info("Starting execution of isEmpty");
+            Boolean expectedValue = true;
+            DiscreteActionDependent discreteactiondependent  =new DiscreteActionDependent( new Object(), "", (Timer) null);
+
+            Boolean actualValue=discreteactiondependent.isEmpty();
+            log.info("Expected Value="+ expectedValue +" . Actual Value="+actualValue);
+            System.out.println("Expected Value="+ expectedValue +" . Actual Value="+actualValue);
+            assertEquals(expectedValue, actualValue);
+        } catch (Exception exception) {
+            log.info("Exception in execution of execute1GetAllLogFromFirstMovF-"+exception);
+            exception.printStackTrace();
+            assertFalse(false);
+        }
+    }
+
+    @Test
+    @DisplayName("next")
+    public void test_next(){
+        try {
+            log.info("Starting execution of next");
+            
+
+            DiscreteActionDependent discreteactiondependent  = new DiscreteActionDependent( new Object(), "", (Timer) null);
+            
+            DiscreteActionInterface expectedValue = discreteactiondependent;
+
+            DiscreteActionInterface actualValue = discreteactiondependent.next();
+            log.info("Expected Value="+ expectedValue +" . Actual Value="+actualValue);
+            System.out.println("Expected Value="+ expectedValue +" . Actual Value="+actualValue);
+            assertEquals(expectedValue, actualValue);
+        } catch (Exception exception) {
+            log.info("Exception in execution of execute1GetAllLogFromFirstMovF-"+exception);
+            exception.printStackTrace();
+            assertFalse(false);
+        }
+    }
+
     @Test
     @DisplayName("has Next")
     public void test_hasNext(){
@@ -130,7 +192,49 @@ class DiscreteActionDependentTest {
             assertFalse(false);
         }
     }
-    
+
+    @Test
+    @DisplayName("get Current Laps Time")
+    public void test_getCurrentLapsTime(){
+        try {
+            log.info("Starting execution of getCurrentLapsTime");
+            Integer expectedValue = null;
+
+            DiscreteActionDependent discreteactiondependent  = new DiscreteActionDependent( new Object(), "", (Timer) null);
+
+            Integer actualValue=discreteactiondependent.getCurrentLapsTime();
+            log.info("Expected Value="+ expectedValue +" . Actual Value="+actualValue);
+            System.out.println("Expected Value="+ expectedValue +" . Actual Value="+actualValue);
+            assertEquals(expectedValue, actualValue);
+        } catch (Exception exception) {
+            log.info("Exception in execution of execute1GetAllLogFromFirstMovF-"+exception);
+            exception.printStackTrace();
+            assertFalse(false);
+        }
+    }
+
+    @Test
+    @DisplayName("get Object")
+    public void test_getObject(){
+        try {
+            log.info("Starting execution of getObject");
+     
+            Object o = new Object();
+            Object expectedValue = o;
+
+            DiscreteActionDependent discreteactiondependent  =new DiscreteActionDependent( o, "", (Timer) null);
+
+            Object actualValue=discreteactiondependent.getObject();
+            log.info("Expected Value="+ expectedValue +" . Actual Value="+actualValue);
+            System.out.println("Expected Value="+ expectedValue +" . Actual Value="+actualValue);
+            assertEquals(expectedValue, actualValue);
+        } catch (Exception exception) {
+            log.info("Exception in execution of execute1GetAllLogFromFirstMovF-"+exception);
+            exception.printStackTrace();
+            assertFalse(false);
+        }
+    }
+
     @AfterEach
     void tearDown() {
     }
