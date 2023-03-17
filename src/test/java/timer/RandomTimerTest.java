@@ -27,9 +27,7 @@ class RandomTimerTest {
             RandomTimer.randomDistribution expectedValue = null;
             String distributionName="";
 
-            RandomTimer.randomDistribution distributionc = null;
-            int lolimc=0;
-            int hilimc=0;
+
 
             RandomTimer.randomDistribution actualValue=RandomTimer.string2Distribution( distributionName);
             log.info("Expected Value="+ expectedValue +" . Actual Value="+actualValue);
@@ -50,9 +48,6 @@ class RandomTimerTest {
             String expectedValue="";
             RandomTimer.randomDistribution distribution = null;
 
-            RandomTimer.randomDistribution distributionc = null;
-            int lolimc=0;
-            int hilimc=0;
 
             String actualValue=RandomTimer.distribution2String( distribution);
             log.info("Expected Value="+ expectedValue +" . Actual Value="+actualValue);

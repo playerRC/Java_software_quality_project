@@ -1,4 +1,4 @@
-package discreteBehaviorSimulator;
+package discretebehaviorsimulator;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
