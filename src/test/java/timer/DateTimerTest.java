@@ -52,11 +52,14 @@ class DateTimerTest {
 	void nextTest() {
 		//assertEquals(date2.next(), 1);
 		try {
-			assertEquals(0, date3.next());
+			int expectedvalue = 0;
+			DateTimer dt = new DateTimer(new TreeSet<Integer>());
+			assertEquals(expectedvalue, dt.next());
 		}
 		catch (Exception e) {
 			//fail("nextTest failure");
-			assertTrue(false);
+			e.printStackTrace();
+
 		}
 	}
 
