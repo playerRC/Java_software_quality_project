@@ -1,4 +1,4 @@
-package discreteBehaviorSimulator;
+package discretebehaviorsimulator;
 
 import discreteBehaviorSimulator.LogFormatter;
 import org.junit.jupiter.api.AfterEach;

@@ -1,7 +1,10 @@
-package discreteBehaviorSimulator;
+package discretebehaviorsimulator;
 
-import discreteBehaviorSimulator.*;
 import org.junit.jupiter.api.*;
+
+import discreteBehaviorSimulator.Clock;
+import discreteBehaviorSimulator.ClockObserver;
+import discretebehaviorsimulator.*;
 
 import java.util.logging.Logger;
 
