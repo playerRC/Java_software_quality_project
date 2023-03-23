@@ -13,5 +13,6 @@ Ce projet a été fait en collaboration par :
 - Alexandre DESCOMPS
 - Ouijdane BOUMAHREZ
 - Richard N'DRI
+- Gaetan BOUCHARD
 - Salma OUKZIZ
 - Kaoutar BOURABI
